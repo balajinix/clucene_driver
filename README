@@ -1,0 +1,31 @@
+CLucene:
+
+Install clucene as explained here http://clucene.sourceforge.net/
+
+  once you do cmake and make, you no longer need the code in that repo. ensure that clucene headers are in /usr/local/include and libclucene-core and libclucene-shared libs are in /usr/local/lib.
+
+*****
+
+CLucene Driver:
+
+1. cd clucene_driver/src
+2. make clean ; make
+
+*****
+
+Why?
+
+releasing this code because CLucene is released as "LGPL or Apache" and we are requested to contribute out feature additions back to the community.
+
+Still Why?
+
+1. CLucene development team provides a demo program to index and search files. CLucene heavily uses CMake and CMake litters a lot.
+2. There is another single file demo program provided by the lead authors which inserts a bunch of characters and performs searches on them.
+
+I want to contribute a single class which anyone can include in their code and start populating their own data. I myself read a mongodb collection and index it.
+
+What?
+
+/shared - its the same /shared folder in the CLucene repo. this driver program only marginally uses these files.
+/src - clucene_driver.cc, clucene_driver.h and a test program t_clucene_driver.
+/data - you may want to give this folder as the index location when you run t_clucene_driver.
